@@ -1,0 +1,55 @@
+﻿body {
+    background-image: url("https://wallpaperaccess.com/full/5923902.jpg");
+    font-family: Courier;
+    color: aliceblue;
+}
+
+table {
+    border: 1px solid whitesmoke;
+    width: 500px;
+}
+
+th, td {
+    border: 1px solid whitesmoke;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: darkgray;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: aliceblue;
+        padding: 20px;
+    }
+
+        li a:hover {
+            background-color: cadetblue;
+        }
+
+.button {
+    width: fit-content;
+    background-color: darkgrey;
+    padding: 20px;
+    color: aliceblue;
+    border-radius: 30px;
+    font-family: Courier;
+}
+
+    .button :hover {
+        background-color: rgb(148, 255, 127);
+    }
