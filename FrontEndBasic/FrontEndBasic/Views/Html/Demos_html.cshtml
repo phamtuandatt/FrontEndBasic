@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewData["Title"] = "Demos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    h6 {
+        color: blueviolet;
+    }
+
+    table {
+        border: 1px solid whitesmoke;
+        width: 500px;
+    }
+
+    th, td {
+        border: 1px solid whitesmoke;
+    }
+
+    tr:nth-child(even) {
+        background-color: darkgray;
+    }
+
+    .button {
+        width: fit-content;
+        background-color: darkgrey;
+        padding: 20px;
+        color: aliceblue;
+        border-radius: 30px;
+        font-family: Courier;
+    }
+    li a:hover{
+        background-color: cadetblue;
+    }
+</style>
+
+<div class="container" style="background-color: transparent;">
+    <div style="height: 50px;"></div>
+    <!------------------------------------------------------------>
+    <hr />
+    <h3> Navbar </h3>
+    <ul style="padding: 0;margin: 0;list-style-type: none;overflow: hidden;background-color: darkgray;">
+        <li style="float: left;"><a href="#" style="display: block;text-decoration: none;text-align: center;color: aliceblue;padding: 20px;">Home</a></li>
+        <li style="float: left;"><a href="#" style="display: block;text-decoration: none;text-align: center;color: aliceblue;padding: 20px;">New</a></li>
+        <li style="float: left;"><a href="#" style="display: block;text-decoration: none;text-align: center;color: aliceblue;padding: 20px;">Contact</a></li>
+        <li style="float: left;"><a href="#" style="display: block;text-decoration: none;text-align: center;color: aliceblue;padding: 20px;">About</a></li>
+    </ul>
+    <!------------------------------------------------------------>
+    <hr />
+    <h1>Image tag</h1>
+    <img src="https://media.tenor.com/W-vLptLL5k4AAAAd/icon.gif"
+         width="30%" height="30%" style="border-radius:50%;" />
+    <br />
+    <a href="https://dictionary.cambridge.org/vi/dictionary/english/run" style="text-decoration: none;color:aliceblue;">
+        <img src="https://i.pinimg.com/originals/65/b7/af/65b7af579ed86689a8457deb517e3805.gif"
+             width="30px" height="30px" style="border-radius:50%;float: left;" alt="Picture" />
+        Cố gắng chưa bao giờ là đủ nhưng không có thành công nào mà thiếu đi sự cố gắng
+    </a>
+
+    <!------------------------------------------------------------>
+    <hr />
+    <h1>Paragraph</h1>
+    <p style="font-family: Tahoma ;">This tag not break line when enter</p>
+    <pre style="font-family: courier">
+            This tag break line when enter.
+            Line has been broken.
+        </pre>
+    <p>
+        Sẽ có lúc giữa những <sub>ngược xuôi</sub> hối hả của <sup>guồng quay cuộc sống</sup>, bạn sẽ bất
+        <del>giác</del>
+        lắng mình suy ngẫm trước những triết lí cuộc sống
+        <mark>"đắt giá"</mark>.
+    </p>
+
+    <!------------------------------------------------------------>
+    <hr />
+    <h3> IFrame </h3>
+    <iframe src="https://www.youtube.com/embed/eI4an8aSsgw" name="iframe_demo" title="Demo iframe" width="1000px" height="500px"></iframe>
+    <div class="button">
+        <a href="https://www.youtube.com/embed/eI4an8aSsgw" target="iframe_demo" style="text-decoration: none; color: aliceblue;">
+            Show youtube page
+        </a>
+    </div>
+
+    <!------------------------------------------------------------>
+    <hr />
+    <h3> Script </h3>
+    <div id="sript_demo" style="width: 1000px; height: 150px; border: 1px dotted white;">
+        <img id="img" src="https://ecdn.game4v.com/g4v-content/uploads/2017/08/character_24035.png"
+             style="border-radius: 30px;width: 150px; height: 150px">
+    </div>
+    <div class="button" onclick="changeItem(1)" style="float: left;">
+        Change Item 1
+    </div>
+    <div class="button" onclick="changeItem(0)" style="float: left;">
+        Change Item 2
+    </div>
+
+    <div style="height:50px"></div>
+</div>
+
+<script>
+    var content = "2. Cố gắng chưa bao giờ là đủ nhưng không" +
+        "có thành công nào mà thiếu đi sự cố gắng" +
+        "Không quan trọng bạn phạm bao nhiêu sai lầm," +
+        " hoặc bạn bước đi chậm chạp đến đâu, bạn vẫn " +
+        "chiến thắng những kẻ không bao giờ biết đến hai từ " +
+        " “cố gắng” và mang một bộ óc “tự phụ”. Đừng quên cuối " +
+        " cùng rùa vẫn là người về đích trước thỏ nhé!";
+
+    function changeContext() {
+        document.getElementById("sript_demo").innerHTML = content;
+    }
+    function changeItem(sw) {
+        var img = "https://ecdn.game4v.com/g4v-content/uploads/2017/08/character_24035.png";
+        if (sw == 0) {
+            img = "https://e1.pngegg.com/pngimages/724/564/png-clipart-doraemon-doraemon.png"
+        } else {
+            img = "https://i.pinimg.com/originals/18/7a/e8/187ae8c6c3354d5d0687e24f24d0defb.jpg"
+        }
+        document.getElementById("img").src = img
+    }
+</script>
+
