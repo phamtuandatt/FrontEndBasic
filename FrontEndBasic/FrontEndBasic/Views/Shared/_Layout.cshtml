@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FrontEndBasic.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <style>
         body {
             background-image: url("https://wallpaperaccess.com/full/5923902.jpg");
@@ -16,47 +20,178 @@
             font-family: Courier;
             color: aliceblue;
         }
+        .ani a:hover{
+            font-size: 120%;
+            padding: 5px;
+            color: blueviolet;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FrontEndBasic</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Html" asp-action="Demos_html">Html_Demo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <!---->
+    <!---->
+    <div style="background-color:rgb(7, 73, 75, 0.2); height:40px;">
+        <img src="~/Image/printer.png" width="30px" height="30px" style="float: right; margin-right: 50px; margin-top: 5px;" onclick="window.print()">
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!--Menu ngang-->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ani" style="z-index: 10000;background-color:rgba(223, 156, 127)">
         <div class="container">
-            &copy; 2022 - FrontEndBasic - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a class="navbar-brand" href="#"><img src="~/Image/4729235.png" width="50px" height="50px"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+                            <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+                            <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-3" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
         </div>
+    </nav>
+
+    <!--Carousel-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="https://i.pinimg.com/originals/cb/ae/ba/cbaebaf3f01d668f84f792c1ca4b79d3.gif" class="d-block w-100" style="width: 804px; height: 400px" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="https://steamuserimages-a.akamaihd.net/ugc/112985497064483940/0A2AE18529A52BA690CC0E809A01CB6A14558372/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" style="width: 804px; height: 400px" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="https://steamuserimages-a.akamaihd.net/ugc/767147470193449464/72DC3E7CDB6EA7B2C13282564E491997A37799D7/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" style="width: 804px; height: 400px" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8573cd06-b729-4a2a-b879-fd71cda2964e/ddvpb9f-f01dc5e1-5d47-4cb1-8a5c-cacf466e8fd7.jpg/v1/fill/w_400,h_400,q_75,strp/goku_sunset_by_rdwoz_ddvpb9f-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvODU3M2NkMDYtYjcyOS00YTJhLWI4NzktZmQ3MWNkYTI5NjRlXC9kZHZwYjlmLWYwMWRjNWUxLTVkNDctNGNiMS04YTVjLWNhY2Y0NjZlOGZkNy5qcGciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.QVfvvqfY1GVZZS5ORJVFYJbgzQNbhw_Qyi0e3lfhJmE" class="d-block w-100" style="width: 100% ; height: 400px" />
+            </div>
+        </div>
+    </div>
+
+    <!--Body-->
+    <div class="container" style="margin-top:20px ;">
+        @RenderBody()
+    </div>
+
+    <!--Footer-->
+    <footer id="footer" style="margin-top: 30px; background-color:  rgba(209, 163, 127, 0.4); color:rgb(248, 248, 248)">
+        <section class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-menu footer-widget" style="margin-top: 15px ;">
+                            <h4 class="cliked">Thông tin</h4>
+                            <ul class="list-menu toggle-mn">
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke;">TẤT CẢ</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke;">Sách Book</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Sách Hướng Dẫn</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Sách Ngoại Văn</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Họa cụ</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">TIN TỨC</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-menu footer-widget" style="margin-top: 15px ;">
+                            <h4 class="cliked">Chính sách</h4>
+                            <ul class="list-menu toggle-mn">
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Chính sách bảo mật thanh toán</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Chính sách vận chuyển</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Chính sách Doi tra</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Quy định sử dụng</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Chính sách Đặt hàng</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Hướng dẫn Thanh Toán</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-menu footer-widget" style="margin-top: 15px ;">
+                            <h4 class="cliked">Hỗ trợ</h4>
+                            <ul class="list-menu toggle-mn">
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Tìm kiếm</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Đăng nhập</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Đăng ký</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Giỏ hàng</a></li>
+
+                                <li><a href="#" title="" style="text-decoration: none; color: whitesmoke">Hướng dẫn</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-menu footer-contact" style="margin-top: 15px ;">
+                            <h4>Liên hệ</h4>
+                            <div style="padding-left: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>&emsp; Bookstore Shop Online
+                                <br />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                </svg>&emsp; dat16072001@gmail.com
+                                <br />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>&emsp; 03 6386 1486
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
