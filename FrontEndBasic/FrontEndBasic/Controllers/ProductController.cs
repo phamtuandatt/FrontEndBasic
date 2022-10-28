@@ -8,5 +8,10 @@ namespace FrontEndBasic.Controllers
         {
             return View();
         }
+
+        public IActionResult Show_Products()
+        {
+            return View();
+        }
     }
 }

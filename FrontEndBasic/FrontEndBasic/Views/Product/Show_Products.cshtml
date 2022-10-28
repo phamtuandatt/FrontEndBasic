@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "Show_Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    main {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        width: 100%;
+        height: 420px;
+    }
+
+    main section {
+        min-width: 17rem;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4ch;
+    }
+
+    .iconnn {
+        width: 17rem;
+        height: 250px;
+        margin: 20px;
+    }
+</style>
+
+<!-- Body -->
+<!-- Featured Product -->
+<div class="container-fluid" style="background-color:rgb(7, 73, 75, 0.2)">
+    <!-- Scroll overflow-x -->
+    <div class="container">
+        <br />
+        <h4>Featured Product -></h4>
+        <main>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://dragonballwiki.net/doctruyen/wp-content/themes/truyenfull/timthumb.php?src=http://2.bp.blogspot.com/-gBAtFkLHs8c/UI-R0eA7HAI/AAAAAAAACt8/9REFNYbjpUI/bia1.png&h=324&w=221&q=80"
+                         class="card-img-top" alt="..." href="https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://product.hstatic.net/200000343865/product/8_102_384cd43c1fdd47c1af3267bbd05090cb_master.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://product.hstatic.net/200000343865/product/7_107_ea25919f0a8b49a48bd269a3a9f6025b.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://vn-live-01.slatic.net/p/712be839271534dd05c5353673ba215b.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421566016/dragon-ball-full-color-vol-3-9781421566016_lg.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://product.hstatic.net/200000343865/product/3_903956b229934416896f6b8320641f6a_master.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+            <section>
+                <a href="" class="iconnn">
+                    <img src="https://product.hstatic.net/200000343865/product/3_187_71c58d72c925496298c9dd46ca8d14b6.jpg"
+                         class="card-img-top" alt="...">
+                </a>
+            </section>
+        </main>
+    </div>
+
+
+</div>
+
+<script>
+    const scrollContainer = document.querySelector("main");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    });
+
+</script>
